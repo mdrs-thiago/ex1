@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rostopic pub /my_turtle/speed turtlesim_test/Speed $1
+

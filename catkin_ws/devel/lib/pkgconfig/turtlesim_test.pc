@@ -1,0 +1,8 @@
+prefix=/home/tmedeiros/ex1/catkin_ws/devel
+
+Name: turtlesim_test
+Description: Description of turtlesim_test
+Version: 0.0.0
+Cflags: -I/home/tmedeiros/ex1/catkin_ws/devel/include
+Libs: -L/home/tmedeiros/ex1/catkin_ws/devel/lib 
+Requires: message_runtime

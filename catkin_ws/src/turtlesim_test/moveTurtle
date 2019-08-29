@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rostopic echo /my_turtle/speed | grep 'data' | tr -s " " |cut -d" " -f3
