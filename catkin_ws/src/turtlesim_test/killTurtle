@@ -1,0 +1,5 @@
+#!/bin/sh
+
+turtleName=$(rostopic list | grep cmd_vel | head -n 1 | cut -d"/" -f3)
+killService=$(rosservice list | grep kill$) 
+rosservice call $killService $turtleName

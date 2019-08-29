@@ -1,3 +1,12 @@
 #!/bin/sh
+vel=$(rostopic echo -n 1 /my_turtle/speed | grep 'data' | sed 's/.*: //g')
+topic=$(rostopic list | grep 'cmd_vel' | head -n1)
+rostopic pub -1 $topic geometry_msgs/Twist -- "[$vel, 0.0, 0.0]" "[0.0, 0.0, 0.0]"
+rostopic pub -1 $topic geometry_msgs/Twist -- "[0.0, 0.0, 0.0]" "[0.0, 0.0, 1.55]"
+rostopic pub -1 $topic geometry_msgs/Twist -- "[$vel, 0.0, 0.0]" "[0.0, 0.0, 0.0]"
+rostopic pub -1 $topic geometry_msgs/Twist -- "[0.0, 0.0, 0.0]" "[0.0, 0.0, 1.55]"
+rostopic pub -1 $topic geometry_msgs/Twist -- "[$vel, 0.0, 0.0]" "[0.0, 0.0, 0.0]"
+rostopic pub -1 $topic geometry_msgs/Twist -- "[0.0, 0.0, 0.0]" "[0.0, 0.0, 1.55]"
+rostopic pub -1 $topic geometry_msgs/Twist -- "[$vel, 0.0, 0.0]" "[0.0, 0.0, 0.0]"
+rostopic pub -1 $topic geometry_msgs/Twist -- "[0.0, 0.0, 0.0]" "[0.0, 0.0, 1.55]"
 
-rostopic echo /my_turtle/speed | grep 'data' | tr -s " " |cut -d" " -f3
